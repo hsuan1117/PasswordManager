@@ -11,33 +11,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b74db962-b605-42b2-bb70-7264d9279281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Vaults.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Models/Password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Vault.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Models/VaultPassword.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Models/VaultUser.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/factories/PasswordFactory.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/factories/VaultFactory.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/factories/VaultPasswordFactory.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/factories/VaultUserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_063446_create_vaults_table.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_075939_create_passwords_table.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_080503_create_vault_passwords_table.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_080527_create_vault_users_table.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vaults.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PasswordManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PasswordManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed39935c-a1f3-472f-824a-bdf4b6f7b879.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed39935c-a1f3-472f-824a-bdf4b6f7b879.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +227,7 @@
       <workItem from="1608704001884" duration="25000" />
       <workItem from="1608704046137" duration="5661000" />
       <workItem from="1608862876794" duration="5629000" />
-      <workItem from="1608908658228" duration="1264000" />
+      <workItem from="1608908658228" duration="1513000" />
     </task>
     <task id="LOCAL-00001" summary="[Feature] Remove password reset">
       <created>1608260126927</created>
@@ -252,7 +243,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608260174373</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[Add] Add Idea Plugin">
+      <created>1608910089131</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608910089131</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[Add] Add Vault">
+      <created>1608910151413</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608910151413</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[Add] Add UUID Composer Project">
+      <created>1608910179706</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608910179706</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +288,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="[Feature] Remove password reset" />
     <MESSAGE value="[Add] Alter the DB seeder" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Add] Alter the DB seeder" />
+    <MESSAGE value="[Add] Add Idea Plugin" />
+    <MESSAGE value="[Add] Add Vault" />
+    <MESSAGE value="[Add] Add UUID Composer Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Add] Add UUID Composer Project" />
   </component>
 </project>
