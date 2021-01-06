@@ -22,4 +22,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/vaults',[Vaults::class, 'index'])->name('vaults');
+Route::get('/vaults',[Vaults::class, 'list'])->name('vaults.list');
+Route::get('/vaults/{id}',[Vaults::class, 'show'])->name('vaults.show');
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->middleware('admin');

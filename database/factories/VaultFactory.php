@@ -25,6 +25,7 @@ class VaultFactory extends Factory
         return [
             'id' => Str::uuid(),
             'name' => "Personal Vault",
+            "description"=>"Default Vault"
         ];
     }
 }

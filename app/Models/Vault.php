@@ -11,6 +11,7 @@ class Vault extends Model
 
     protected $fillable = [
         'id',
-        'name'
+        'name',
+        'description'
     ];
 }

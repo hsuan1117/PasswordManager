@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Vault;
+use App\Policies\VaultPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -14,6 +16,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
+        Vault::class => VaultPolicy::class
     ];
 
     /**
@@ -25,6 +28,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('show-vault', [VaultPolicy::class, 'view']);
     }
 }

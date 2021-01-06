@@ -123,6 +123,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
       <path value="$PROJECT_DIR$/vendor/goldspecdigital/laravel-eloquent-uuid" />
+      <path value="$PROJECT_DIR$/vendor/rap2hpoutre/laravel-log-viewer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

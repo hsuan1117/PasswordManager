@@ -11,24 +11,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b74db962-b605-42b2-bb70-7264d9279281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/VaultPassword.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/VaultUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/PasswordFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/VaultFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/VaultPasswordFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/VaultUserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_075939_create_passwords_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_080503_create_vault_passwords_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_080527_create_vault_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/AdminCheck.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Policies/VaultPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/App/Vaults/list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/App/Vaults/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PasswordManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PasswordManager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Vaults.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Vaults.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Vault.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vault.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/VaultFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/VaultFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_23_063446_create_vaults_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_063446_create_vaults_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vaults.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,6 +174,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
       <path value="$PROJECT_DIR$/vendor/goldspecdigital/laravel-eloquent-uuid" />
+      <path value="$PROJECT_DIR$/vendor/rap2hpoutre/laravel-log-viewer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hGNIDIcEENLKBsmGfelRC7eZZ2" />
@@ -187,7 +191,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/App/Vaults" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -200,8 +204,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GithubProject\PasswordManager\resources\views\App\Vaults" />
       <recent name="D:\GithubProject\PasswordManager\resources\views" />
       <recent name="D:\Github專案\PasswordManager" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GithubProject\PasswordManager\resources\views\App\Vaults" />
     </key>
   </component>
   <component name="RunManager">
@@ -227,7 +235,9 @@
       <workItem from="1608704001884" duration="25000" />
       <workItem from="1608704046137" duration="5661000" />
       <workItem from="1608862876794" duration="5629000" />
-      <workItem from="1608908658228" duration="1513000" />
+      <workItem from="1608908658228" duration="3000000" />
+      <workItem from="1609600253351" duration="604000" />
+      <workItem from="1609910609320" duration="5944000" />
     </task>
     <task id="LOCAL-00001" summary="[Feature] Remove password reset">
       <created>1608260126927</created>
@@ -264,7 +274,35 @@
       <option name="project" value="LOCAL" />
       <updated>1608910179706</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[Add] Add Password">
+      <created>1608910206036</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608910206036</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[Add] Add Vault &lt;-&gt; Password Model">
+      <created>1608910233913</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608910233913</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[Add] Add Vault &lt;-&gt; User Model">
+      <created>1608910250188</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608910250188</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[Add] Add Database Seed">
+      <created>1608910260819</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608910260819</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +329,10 @@
     <MESSAGE value="[Add] Add Idea Plugin" />
     <MESSAGE value="[Add] Add Vault" />
     <MESSAGE value="[Add] Add UUID Composer Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Add] Add UUID Composer Project" />
+    <MESSAGE value="[Add] Add Password" />
+    <MESSAGE value="[Add] Add Vault &lt;-&gt; Password Model" />
+    <MESSAGE value="[Add] Add Vault &lt;-&gt; User Model" />
+    <MESSAGE value="[Add] Add Database Seed" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Add] Add Database Seed" />
   </component>
 </project>

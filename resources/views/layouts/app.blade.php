@@ -59,7 +59,7 @@
                                         Profile
                                     </x-jet-dropdown-link>
 
-                                    <x-jet-dropdown-link href="{{route('vaults')}}">
+                                    <x-jet-dropdown-link href="{{route('vaults.list')}}">
                                         My Passwords
                                     </x-jet-dropdown-link>
 
