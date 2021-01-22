@@ -34,6 +34,17 @@
             <div class="mt-10 sm:mt-0">
                 @livewire('profile.delete-user-form')
             </div>
+
+            <x-jet-section-border />
+
+            <div class="mt-10 sm:mt-0 items-center">
+                <form action="{{route('action.set_master_key')}}" method="post">
+                    <input type="password" name="key">
+                    <button type="submit" >Set MasterKey</button>
+                    @csrf
+                </form>
+
+            </div>
         </div>
     </div>
 </x-app-layout>

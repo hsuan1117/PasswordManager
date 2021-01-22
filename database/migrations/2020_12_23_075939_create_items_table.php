@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVaultPasswordsTable extends Migration
+class CreateItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateVaultPasswordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('vault_passwords', function (Blueprint $table) {
-            $table->id();
-            $table->uuid('vault');
-            $table->uuid('password');
+        Schema::create('items', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->uuid('vault_id')->index();
+            $table->json('payload');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateVaultPasswordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vault_passwords');
+        Schema::dropIfExists('items');
     }
 }

@@ -6,7 +6,6 @@ use App\Http\Middleware\AdminCheck;
 use App\Models\User;
 use App\Models\Vault;
 use Illuminate\Auth\Access\HandlesAuthorization;
-use App\Models\VaultUser;
 
 class VaultPolicy
 {
@@ -20,7 +19,7 @@ class VaultPolicy
      */
     public function viewAny(User $user)
     {
-        if ($user->role == "ROOT" || $user->role == "ADMIN") {
+        if ($user->role == User::ROLE_ROOT || $user->role == User::ROLE_ADMIN) {
             return true;
         }
 
@@ -36,10 +35,7 @@ class VaultPolicy
      */
     public function view(User $user, Vault $vault)
     {
-        $permission = VaultUser::where('user',$user->id)
-            ->where('vault',$vault->id)
-            ->get();
-        if(!$permission){
+        if(!$user->vaults->contains($vault)){
             return false;
         }
 
@@ -54,6 +50,7 @@ class VaultPolicy
      */
     public function create(User $user)
     {
+
         return true;
     }
 
@@ -66,14 +63,7 @@ class VaultPolicy
      */
     public function update(User $user, Vault $vault)
     {
-        $permission = VaultUser::where('user',$user->id)
-            ->where('vault',$vault->id)
-            ->get();
-        if(!$permission){
-            return false;
-        }else{
-            return $permission->permission == "ADMIN";
-        }
+        return true;
     }
 
     /**
@@ -85,14 +75,7 @@ class VaultPolicy
      */
     public function delete(User $user, Vault $vault)
     {
-        $permission = VaultUser::where('user',$user->id)
-            ->where('vault',$vault->id)
-            ->get();
-        if(!$permission){
-            return false;
-        }else{
-            return $permission->permission == "ADMIN";
-        }
+        return true;
     }
 
     /**
@@ -104,14 +87,7 @@ class VaultPolicy
      */
     public function restore(User $user, Vault $vault)
     {
-        $permission = VaultUser::where('user',$user->id)
-            ->where('vault',$vault->id)
-            ->get();
-        if(!$permission){
-            return false;
-        }else{
-            return $permission->permission == "ADMIN";
-        }
+        return true;
     }
 
     /**
@@ -123,13 +99,6 @@ class VaultPolicy
      */
     public function forceDelete(User $user, Vault $vault)
     {
-        $permission = VaultUser::where('user',$user->id)
-            ->where('vault',$vault->id)
-            ->get();
-        if(!$permission){
-            return false;
-        }else{
-            return $permission->permission == "ADMIN";
-        }
+        return true;
     }
 }

@@ -2,12 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Password;
+use App\Models\Item;
 use App\Models\Vault;
-use App\Models\VaultPassword;
-use App\Models\VaultUser;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Support\Str;
+use App\Http\Features\SM4;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,21 +19,29 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::factory(1)->create();
-        $vault = Vault::factory()->create();
-        $password = Password::factory()->create([
-            'type' => "password",
-            'content' => json_encode([])
+        $sm4 = new SM4();
+        $key = bin2hex(Str::limit(sm3("DEFAULT"),16));
+
+        $user = User::create([
+            'name' => 'Hsuan',
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('password'),
+            'role' => User::ROLE_ROOT
         ]);
-        VaultPassword::factory()->create([
-            'vault' => $vault['id'],
-            'password' => $password['id']
+        $vault = $user->vaults()->create([
+            'name' => 'Default',
+            'description' => 'Test Vault'
+        ]);
+        //$item = new Item
+        $vault->items()->create([
+            'payload'=>[
+                'type' => 'ordinary',
+                'name' => 'Windows Server',
+                'secret'=>$sm4->setKey($key)->encryptData(json_encode([
+                    "ka"=>"ak"
+                ]))
+            ]
         ]);
 
-        VaultUser::factory()->create([
-           'user' => $user[0]->id,
-           'vault' => $vault['id'],
-           'permission' => "ADMIN"
-        ]);
     }
 }

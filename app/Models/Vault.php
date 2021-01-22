@@ -7,11 +7,18 @@ use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Model;
 
 class Vault extends Model
 {
-    use HasFactory;
 
     protected $fillable = [
         'id',
         'name',
         'description'
     ];
+
+    public function items(){
+        return $this->hasMany(Item::class);
+    }
+
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 }

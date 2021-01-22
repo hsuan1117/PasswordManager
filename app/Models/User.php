@@ -17,16 +17,16 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    const ROLE_ADMIN = 'ADMIN';
+    const ROLE_ROOT  = 'ROOT';
+
+
     protected $fillable = [
         'name',
         'email',
         'password',
-        'role'
+        'role',
+        'master_key'
     ];
 
     /**
@@ -58,4 +58,8 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function vaults(){
+        return $this->belongsToMany(Vault::class);
+    }
 }

@@ -6,12 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Model;
 
 
-class Password extends Model
+class Item extends Model
 {
-    use HasFactory;
+    protected $casts = [
+        'payload' => 'array',
+    ];
 
     protected $fillable = [
-        'type',
-        'content'
+        'vault_id',
+        'payload'
     ];
 }

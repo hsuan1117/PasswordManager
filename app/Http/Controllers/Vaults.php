@@ -3,38 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vault;
-use App\Models\VaultUser;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Collection;
+use App\Http\Features\SM4;
 
 class Vaults extends Controller {
 
     public function list() {
-        Log::alert('Access Vault List: '.Auth::user()->id);
-        $vaults = VaultUser::where('user', Auth::user()->id)->get();
-        $vault_list = [];
-
+        Log::alert('Access Vault List: ' . auth()->user()->id);
+        $user = auth()->user();
+        $vaults = $user->vaults()->get();
         //dd($vaults);
-        foreach ($vaults as $v) {
-            $vault = $v->vault;
-
-            array_push($vault_list, Vault::where('id', $vault)->get()[0]);
-        }
-        //dd($vault_list);
         return view('App.Vaults.list', [
-            'vaults' => $vault_list
+            'vaults' => $vaults
         ]);
     }
 
     public function show($id) {
-        $vault = Vault::where('id',$id)->get()[0];
+        $vault = Vault::where('id', $id)->first();
         if (Gate::forUser(Auth::user())->allows('show-vault', $vault)) {
             echo "hi";
         }
         return view('App.Vaults.show', [
-            'vaults' => []
+            'vault' => $vault
         ]);
     }
 

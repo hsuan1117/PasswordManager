@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVaultUsersTable extends Migration
+class CreateUserVaultTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateVaultUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('vault_users', function (Blueprint $table) {
+        Schema::create('user_vault', function (Blueprint $table) {
             $table->id();
-
-            $table->integer('user');
-            $table->uuid('vault');
-            $table->string('permission');
+            $table->uuid('vault_id');
+            $table->uuid('user_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateVaultUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vault_users');
+        Schema::dropIfExists('user_vault');
     }
 }
