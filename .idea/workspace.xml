@@ -11,52 +11,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b74db962-b605-42b2-bb70-7264d9279281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Item/WebsiteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Items.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Features/SM4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ItemWebsite.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/App/Vaults/Items/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/App/Vaults/Items/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/item-website.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/SetLocale.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/words.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/zh-TW/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/zh-TW/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/zh-TW/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/zh-TW/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/zh-TW/words.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/App/Common/error.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PasswordManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PasswordManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed39935c-a1f3-472f-824a-bdf4b6f7b879.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed39935c-a1f3-472f-824a-bdf4b6f7b879.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Item/WebsiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Item/WebsiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Items.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Vaults.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Vaults.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Password.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Vault.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vault.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/VaultPassword.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/VaultUser.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/VaultPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/VaultPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/PasswordFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/VaultFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/VaultPasswordFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/VaultUserFactory.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_23_075939_create_passwords_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_075939_create_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_23_080503_create_vault_passwords_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_20_070518_create_user_vault_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_23_080527_create_vault_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/App/Vaults/Items/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/App/Vaults/Items/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/App/Vaults/Items/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/App/Vaults/Items/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/App/Vaults/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/App/Vaults/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/item-website.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/item-website.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -214,6 +200,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/bjeavons/zxcvbn-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hGNIDIcEENLKBsmGfelRC7eZZ2" />
@@ -230,7 +217,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/App/Vaults/Items" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/en" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -238,15 +225,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="Configurable.PHP.Blade" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GithubProject\PasswordManager\resources\lang\en" />
+      <recent name="D:\GithubProject\PasswordManager\resources\lang\zh-TW" />
+      <recent name="D:\GithubProject\PasswordManager\resources\lang" />
+      <recent name="D:\GithubProject\PasswordManager\resources\views\App\Common" />
       <recent name="D:\GithubProject\PasswordManager\resources\views\App\Vaults\Items" />
-      <recent name="D:\GithubProject\PasswordManager\resources\views\App\Vaults" />
-      <recent name="D:\GithubProject\PasswordManager\resources\views" />
-      <recent name="D:\Github專案\PasswordManager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GithubProject\PasswordManager\app\Http" />
@@ -299,7 +287,12 @@
       <workItem from="1611155738833" duration="4007000" />
       <workItem from="1611204671812" duration="12153000" />
       <workItem from="1611244529865" duration="1561000" />
-      <workItem from="1611296257492" duration="3080000" />
+      <workItem from="1611296257492" duration="3171000" />
+      <workItem from="1611389258995" duration="2511000" />
+      <workItem from="1611415536932" duration="5103000" />
+      <workItem from="1611502087430" duration="4244000" />
+      <workItem from="1611561317015" duration="1864000" />
+      <workItem from="1611591441291" duration="1525000" />
     </task>
     <task id="LOCAL-00001" summary="[Feature] Remove password reset">
       <created>1608260126927</created>
@@ -364,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608910260819</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[Release] Release POC">
+      <created>1611299876513</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611299876513</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +395,11 @@
     <MESSAGE value="[Add] Add Vault &lt;-&gt; Password Model" />
     <MESSAGE value="[Add] Add Vault &lt;-&gt; User Model" />
     <MESSAGE value="[Add] Add Database Seed" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Add] Add Database Seed" />
+    <MESSAGE value="[Release] Release POC" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Release] Release POC" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

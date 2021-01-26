@@ -3,6 +3,7 @@
 use App\Http\Controllers\Settings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Items;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('password_strength',[Items::class,'get_strength'])->name('action.items.strength');

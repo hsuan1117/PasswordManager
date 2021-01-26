@@ -20,7 +20,10 @@ class WebsiteController extends Controller
         $item  = $vault->items()->find($request->item_id);
         $key = bin2hex(Str::limit(sm3($user->master_key),16));
 
+
         $payload = $item->payload;
+        $payload['name'] = $request->item_name;
+
         $payload['secret'] = $sm4->setKey($key)->encryptData(json_encode([
             'domain' => $request->domain,
             'account' => $request->account,

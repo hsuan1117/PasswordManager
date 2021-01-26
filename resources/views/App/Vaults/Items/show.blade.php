@@ -1,27 +1,29 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            My Vaults
+            <a href="{{route('vaults.show',['id'=>$route['id']])}}">
+                {{$vault['name'] ?? 'My Vaults'}}
+            </a>
         </h2>
     </x-slot>
 
-    @if($message)
-        @switch($message['type'])
+    @if(Session::has('message') && !empty(Session::get('message') ?? []))
+        @switch(Session::get('message.type'))
             @case('success')
             <div class="bg-green-200 text-center rounded m-1.5 p-1.5 pt-2" >
-                {{$message['msg']??''}}
+                {{Session::get('message.msg')??''}}
             </div>
             @break
 
             @case('error')
             <div class="bg-red-500 text-center rounded m-1.5 p-1.5 pt-2" >
-                {{$message['msg']??''}}
+                {{Session::get('message.msg')??''}}
             </div>
             @break
 
             @default
             <div class="bg-gray-400 text-center rounded m-1.5 p-1.5 pt-2" >
-                {{$message['msg']??''}}
+                {{Session::get('message.msg')??''}}
             </div>
         @endswitch
     @endif
@@ -38,17 +40,17 @@
                 </div>
 
                 <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 ">
-<!--
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">
+                <!--
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">
                                     {{$item['type'] ?? ''}}
-                                </div>
                             </div>
                         </div>
--->
+                    </div>
+                -->
                     @livewire('item-website', [
-                        'data'=>($item['secret'] ?? '' ),
+                        'data'=>($item ?? '' ),
                         'route'=> [
                             'id'=>$route['id'],
                             'item'=>($route['item'] ?? '')
@@ -58,4 +60,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </x-app-layout>

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Collection;
 use App\Http\Features\SM4;
+use Illuminate\Support\Facades\Session;
 
 class Vaults extends Controller {
 
@@ -25,8 +26,10 @@ class Vaults extends Controller {
 
     public function show($id) {
         $vault = Vault::where('id', $id)->first();
-        if (Gate::forUser(Auth::user())->allows('show-vault', $vault)) {
-            echo "hi";
+        if (!Gate::forUser(Auth::user())->allows('show-vault', $vault)) {
+            Session::flash('message.type','error');
+            Session::flash('message.msg' ,'YOU Don\'t Have Permission!');
+            return view('App.Common.error');
         }
         return view('App.Vaults.show', [
             'vault' => $vault

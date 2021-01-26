@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         @livewireStyles
-        <script href="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -33,7 +33,10 @@
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <x-jet-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
-                                    Dashboard
+                                    {{__('words.dashboard')}}
+                                </x-jet-nav-link>
+                                <x-jet-nav-link href="{{route('vaults.list')}}" :active="request()->routeIs('vaults.list')">
+                                    {{__('words.vault')}}
                                 </x-jet-nav-link>
                             </div>
                         </div>
@@ -50,15 +53,15 @@
                                 <x-slot name="content">
                                     <!-- Account Management -->
                                     <div class="block px-4 py-2 text-xs text-gray-400">
-                                        Manage Account
+                                        {{__('words.dropdown.account')}}
                                     </div>
 
-                                    <x-jet-dropdown-link href="/user/profile">
-                                        Profile
+                                    <x-jet-dropdown-link href="{{route('vaults.list')}}">
+                                        {{__('words.dropdown.vault')}}
                                     </x-jet-dropdown-link>
 
-                                    <x-jet-dropdown-link href="{{route('vaults.list')}}">
-                                        My Passwords
+                                    <x-jet-dropdown-link href="/user/profile">
+                                        {{__('words.dropdown.settings')}}
                                     </x-jet-dropdown-link>
 
                                     @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -107,7 +110,7 @@
                                         <x-jet-dropdown-link href="{{ route('logout') }}"
                                                             onclick="event.preventDefault();
                                                                      this.closest('form').submit();">
-                                            Logout
+                                            {{__('words.logout')}}
                                         </x-jet-dropdown-link>
                                     </form>
                                 </x-slot>

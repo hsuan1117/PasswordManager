@@ -4,6 +4,7 @@ use App\Http\Controllers\Items;
 use App\Http\Controllers\Settings;
 use App\Http\Controllers\Vaults;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Item\WebsiteController;
 
 /*
@@ -16,7 +17,7 @@ use App\Http\Controllers\Item\WebsiteController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//App::setLocale('zh_TW');
 Route::get('/', function () {
     return view('welcome');
 });

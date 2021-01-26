@@ -1,5 +1,5 @@
 <x-app-layout>
-    @if(Session::has('message'))
+    @if(Session::has('message') && !empty(Session::get('message') ?? [])))
         @switch(Session::get('message.type'))
             @case('success')
             <div class="bg-green-200 text-center rounded m-1.5 p-1.5 pt-2" >
@@ -22,7 +22,7 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Dashboard
+            {{ __('words.dashboard') }}
         </h2>
     </x-slot>
 
