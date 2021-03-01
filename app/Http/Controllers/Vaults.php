@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Collection;
 use App\Http\Features\SM4;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 class Vaults extends Controller {
 
@@ -26,6 +27,7 @@ class Vaults extends Controller {
 
     public function show($id) {
         $vault = Vault::where('id', $id)->first();
+
         if (!Gate::forUser(Auth::user())->allows('show-vault', $vault)) {
             Session::flash('message.type','error');
             Session::flash('message.msg' ,'YOU Don\'t Have Permission!');
@@ -34,6 +36,31 @@ class Vaults extends Controller {
         return view('App.Vaults.show', [
             'vault' => $vault
         ]);
+    }
+
+    public function delete($id){
+        $vault = Vault::where('id',$id)->first();
+
+        $vault->items();
+
+        return redirect(route('vaults.list'));
+    }
+    public function add(){
+        return view('App.Vaults.add');
+    }
+
+    public function action_add(Request $request){
+        $user  = auth()->user();
+
+        $vault = $user->vaults()->create([
+            'name' => $request->vault_name,
+            'description' => $request->vault_desc
+        ]);
+
+        return redirect(route('vaults.show',[
+            'id' =>$vault->id
+        ]));
+
     }
 
     public function __construct() {

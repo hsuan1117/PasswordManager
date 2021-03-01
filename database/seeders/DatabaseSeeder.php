@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         //$item = new Item
         $vault->items()->create([
             'payload'=>[
-                'type' => 'ordinary',
+                'type' => 'website',
                 'name' => 'Windows Server',
                 'secret'=>$sm4->setKey($key)->encryptData(json_encode([
                     "ka"=>"ak"

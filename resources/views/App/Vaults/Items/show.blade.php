@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <a href="{{route('vaults.show',['id'=>$route['id']])}}">
+            <a href="{{route('vaults.show',['id'=>$route['vault_id']])}}">
                 {{$vault['name'] ?? 'My Vaults'}}
             </a>
         </h2>
@@ -10,19 +10,19 @@
     @if(Session::has('message') && !empty(Session::get('message') ?? []))
         @switch(Session::get('message.type'))
             @case('success')
-            <div class="bg-green-200 text-center rounded m-1.5 p-1.5 pt-2" >
+            <div class="bg-green-200 text-center rounded m-1.5 p-1.5 pt-2">
                 {{Session::get('message.msg')??''}}
             </div>
             @break
 
             @case('error')
-            <div class="bg-red-500 text-center rounded m-1.5 p-1.5 pt-2" >
+            <div class="bg-red-500 text-center rounded m-1.5 p-1.5 pt-2">
                 {{Session::get('message.msg')??''}}
             </div>
             @break
 
             @default
-            <div class="bg-gray-400 text-center rounded m-1.5 p-1.5 pt-2" >
+            <div class="bg-gray-400 text-center rounded m-1.5 p-1.5 pt-2">
                 {{Session::get('message.msg')??''}}
             </div>
         @endswitch
@@ -45,18 +45,33 @@
                         <div class="flex items-center">
                             <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">
                                     {{$item['type'] ?? ''}}
-                            </div>
-                        </div>
                     </div>
+                </div>
+            </div>
                 -->
-                    @livewire('item-website', [
-                        'data'=>($item ?? '' ),
-                        'route'=> [
-                            'id'=>$route['id'],
-                            'item'=>($route['item'] ?? '')
-                        ],
-                        'type' => $type
-                    ])
+                    @switch($item['type'])
+                        @case('website')
+                        @livewire('item-website', [
+                            'data'=>($item ?? '' ),
+                            'route'=> [
+                                'id'=>$route['vault_id'],
+                                'item'=>($route['item'] ?? '')
+                            ],
+                            'type' => $type
+                        ])
+                        @break
+
+                        @default
+                        @livewire('item-website', [
+                            'data'=>($item ?? '' ),
+                            'route'=> [
+                                'id'=>$route['vault_id'],
+                                'item'=>($route['item'] ?? '')
+                            ],
+                            'type' => $type
+                        ])
+                    @endswitch
+
                 </div>
             </div>
         </div>

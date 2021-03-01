@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             <a href="{{route('vaults.list')}}">
-                My Vaults
+                {{$vault->name ?? "My Vaults"}}
             </a>
         </h2>
     </x-slot>
@@ -11,11 +11,17 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
-                    <div class="mt-8 text-2xl relative">
-                    {{$vault->name}}
-                    <a class="absolute right-0 bg-transparent bg-green-400 text-white py-1 px-3.5 border border-blue hover:border-transparent rounded"
-                    href="{{route('items.add',['id'=>$vault->id])}}"
-                    >Add</a>
+                    <div class="mt-8 text-2xl relative block">
+                        {{$vault->name}}
+                        <div class="absolute top-0 right-0 block text-lg">
+                            <a class="inline-block bg-transparent bg-green-400 text-white py-1 px-3.5 border border-blue hover:border-transparent rounded"
+                               href="{{route('items.add',['id'=>$vault->id])}}"
+                            >Add Item</a>
+
+                            <a class="inline-block bg-transparent bg-red-400   text-white py-1 px-3.5 border border-blue hover:border-transparent rounded"
+                               href="{{route('items.add',['id'=>$vault->id])}}"
+                            >Delete</a>
+                        </div>
                     </div>
                     <br>
                     {{$vault->description}}

@@ -23,6 +23,7 @@ class Items extends Controller
         $vault = Vault::find($id);
         $key = bin2hex(Str::limit(sm3($user->master_key),16));
 
+        $key = $sm4->genKeyFromString($user->master_key);
         Log::alert("User {$user->id} access password {$item}");
 
         if (!Gate::forUser($user)->allows('show-vault', $vault)) {
@@ -38,7 +39,7 @@ class Items extends Controller
             $sm4->setKey($key)->decryptData($item->payload['secret'])
         );
         $item->payload = $payload;
-        //dd($item->payload['secret']);
+        //dd($item->payload);
 
         if(is_null($item->payload['secret'])){
             Session::flash('message.type','error');
@@ -46,7 +47,7 @@ class Items extends Controller
             return view('App.Vaults.Items.show',[
                 'item' => $item->payload,
                 'route' => [
-                    'id' => $id,
+                    'vault_id' => $id,
                     'item' => $item_id
                 ],
                 'vault' => $vault,
@@ -59,7 +60,7 @@ class Items extends Controller
         return view('App.Vaults.Items.show',[
             'item' => $item->payload,
             'route' => [
-                'id' => $id,
+                'vault_id' => $id,
                 'item' => $item_id
             ],
             'vault' => $vault,
@@ -70,15 +71,33 @@ class Items extends Controller
     public function add($id){
         /*Session::flash('message.type','success');
         Session::flash('message.msg' ,'Okay !');*/
-        return view('App.Vaults.Items.show',[
-            'item' => [],
+        return view('App.Vaults.Items.add',[
             'route' => [
-                'id' => $id
-            ],
-            'type' => 'add'
+                'vault_id' => $id
+            ]
         ]);
+
+
+        /**/
     }
 
+
+    public function action_add(Request $request){
+        switch ($request->item_type){
+            case 'website':
+                return view('App.Vaults.Items.show',[
+                    'item' => [
+                        'type' => 'website'
+                    ],
+                    'route' => [
+                        'vault_id' => $request->vault_id
+                    ],
+                    'type' => 'add'
+                ]);
+                break;
+
+        }
+    }
 
     public function get_strength(Request $request){
         $zxcvbn = new Zxcvbn();

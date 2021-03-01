@@ -27,13 +27,19 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/vaults',[Vaults::class, 'list'])->name('vaults.list');
+Route::get('/vaults/add',[Vaults::class, 'add'])->name('vaults.add');
 Route::get('/vaults/{id}',[Vaults::class, 'show'])->name('vaults.show');
+Route::get('/vaults/{id}/delete',[Vaults::class, 'delete'])->name('vaults.delete');
 Route::get('/vaults/{id}/add',[Items::class, 'add'])->name('items.add');
 Route::get('/vaults/{id}/{item}',[Items::class, 'show'])->name('items.show');
 
+Route::post('/add_vault',[Vaults::class,'action_add'])->name('action.vault.add');
+Route::post('/add_item',[Items::class,'action_add'])->name('action.item.add');
+Route::post('/add_item_website',[WebsiteController::class, 'add'])->name('action.items.website.add');
+Route::post('/modify_item_website',[WebsiteController::class, 'modify'])->name('action.items.website.modify');
 
-Route::post('/add_item',[WebsiteController::class, 'add'])->name('action.items.add');
-Route::post('/modify_item',[WebsiteController::class, 'modify'])->name('action.items.modify');
+
 Route::post('/set_master_key',[Settings::class, 'setMasterKey'])->name('action.set_master_key');
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->middleware('admin');
+

@@ -1,5 +1,8 @@
 <?php
 namespace App\Http\Features;
+use Illuminate\Support\Str;
+use Exception;
+
 /**
  * Created by PhpStorm.
  * User: KeenSting
@@ -56,7 +59,7 @@ class SM4
 
     /**设置加密秘钥
      *
-     * @param $key 32个十六进制的字符
+     * @param string $key 要轉成金鑰的密碼
      *
      * @return $this
      * @throws Exception
@@ -68,6 +71,17 @@ class SM4
 
         return $this;
     }
+
+    /**產生金鑰
+     * @param $pwd 32个十六进制的字符
+     *
+     * @return string
+     * @throws Exception
+     * */
+    public function genKeyFromString($pwd) {
+        return bin2hex(Str::limit(sm3($pwd),16));
+    }
+
 
     /**
      * 计算每轮加密需要的秘钥

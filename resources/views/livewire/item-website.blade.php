@@ -16,8 +16,8 @@
                 action="
                 {{
                     ($type == 'add')?
-                    route('action.items.add'):
-                    route('action.items.modify')
+                    route('action.items.website.add'):
+                    route('action.items.website.modify')
                 }}"
                 method="post">
 
