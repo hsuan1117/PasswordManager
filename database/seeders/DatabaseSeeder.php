@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $user = User::create([
             'name' => 'Hsuan',
             'email' => 'admin@admin.com',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('adminadmin'),
             'role' => User::ROLE_ROOT
         ]);
         $vault = $user->vaults()->create([
@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
         $vault->items()->create([
             'payload'=>[
                 'type' => 'website',
-                'name' => 'Windows Server',
+                'name' => 'Facebook',
                 'secret'=>$sm4->setKey($key)->encryptData(json_encode([
                     "ka"=>"ak"
                 ]))

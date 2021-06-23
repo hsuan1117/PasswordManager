@@ -11,20 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b74db962-b605-42b2-bb70-7264d9279281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/App/Vaults/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/LOGO.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PasswordManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PasswordManager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Items.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Items.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Vaults.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Vaults.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Features/SM4.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Features/SM4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/App/Vaults/Items/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/App/Vaults/Items/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/App/Vaults/Items/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/App/Vaults/Items/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/App/Vaults/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/App/Vaults/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/App/Vaults/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/App/Vaults/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/item-website.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/item-website.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/application-logo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/application-logo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,8 +188,10 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/App/Vaults" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -210,11 +204,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GithubProject\PasswordManager\public" />
       <recent name="D:\GithubProject\PasswordManager\resources\views\App\Vaults" />
       <recent name="D:\GithubProject\PasswordManager\resources\lang\en" />
       <recent name="D:\GithubProject\PasswordManager\resources\lang\zh-TW" />
       <recent name="D:\GithubProject\PasswordManager\resources\lang" />
-      <recent name="D:\GithubProject\PasswordManager\resources\views\App\Common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GithubProject\PasswordManager\app\Http" />
@@ -290,6 +284,9 @@
       <workItem from="1613404564690" duration="625000" />
       <workItem from="1613746095187" duration="12000" />
       <workItem from="1614583884521" duration="178000" />
+      <workItem from="1614616142337" duration="98000" />
+      <workItem from="1614699056690" duration="7000" />
+      <workItem from="1624410405735" duration="538000" />
     </task>
     <task id="LOCAL-00001" summary="[Feature] Remove password reset">
       <created>1608260126927</created>
@@ -368,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611645484628</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[Update] Add original option to website option">
+      <created>1614616232209</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1614616232209</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +405,8 @@
     <MESSAGE value="[Add] Add Database Seed" />
     <MESSAGE value="[Release] Release POC" />
     <MESSAGE value="[Release] POC.20210126" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Release] POC.20210126" />
+    <MESSAGE value="[Update] Add original option to website option" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Update] Add original option to website option" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
