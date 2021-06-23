@@ -10,13 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b74db962-b605-42b2-bb70-7264d9279281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/LOGO.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PasswordManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PasswordManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="b74db962-b605-42b2-bb70-7264d9279281" name="Default Changelist" comment="[Update] Add default admin password">
+      <change afterPath="$PROJECT_DIR$/resources/lang/zh-TW/pages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/application-logo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/application-logo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +189,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/zh-TW" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -204,10 +202,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GithubProject\PasswordManager\resources\lang\zh-TW" />
       <recent name="D:\GithubProject\PasswordManager\public" />
       <recent name="D:\GithubProject\PasswordManager\resources\views\App\Vaults" />
       <recent name="D:\GithubProject\PasswordManager\resources\lang\en" />
-      <recent name="D:\GithubProject\PasswordManager\resources\lang\zh-TW" />
       <recent name="D:\GithubProject\PasswordManager\resources\lang" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -286,7 +284,7 @@
       <workItem from="1614583884521" duration="178000" />
       <workItem from="1614616142337" duration="98000" />
       <workItem from="1614699056690" duration="7000" />
-      <workItem from="1624410405735" duration="538000" />
+      <workItem from="1624410405735" duration="897000" />
     </task>
     <task id="LOCAL-00001" summary="[Feature] Remove password reset">
       <created>1608260126927</created>
@@ -372,7 +370,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614616232209</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[Update] Add Logo">
+      <created>1624411000403</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1624411000404</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[Update] Add default admin password">
+      <created>1624411015172</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1624411015172</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +418,9 @@
     <MESSAGE value="[Release] Release POC" />
     <MESSAGE value="[Release] POC.20210126" />
     <MESSAGE value="[Update] Add original option to website option" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Update] Add original option to website option" />
+    <MESSAGE value="[Update] Add Logo" />
+    <MESSAGE value="[Update] Add default admin password" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Update] Add default admin password" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
