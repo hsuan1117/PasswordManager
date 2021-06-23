@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            My Vaults
+            {{__('pages.vault.my')}}
         </h2>
     </x-slot>
 
@@ -10,10 +10,10 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
                     <div class="mt-8 text-2xl relative">
-                        Vaults
+                        {{__('pages.vault.title')}}
                         <a class="absolute right-0 bg-transparent bg-green-400 text-white py-1 px-3.5 border border-blue hover:border-transparent rounded"
                             href="{{@route('vaults.add')}}"
-                        >Add</a>
+                        >{{__('pages.vault.add')}}</a>
                     </div>
                     <br>
                 </div>
@@ -38,7 +38,7 @@
                             <a href="{{route('vaults.show',['id'=>$vault->id])}}"
                                target="_blank">
                                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                                    <div>View Vault</div>
+                                    <div>{{__('pages.vault.view')}}</div>
 
                                     <div class="ml-1 text-indigo-500">
                                         <svg viewBox="0 0 20 20" fill="currentColor" class="arrow-right w-4 h-4">
